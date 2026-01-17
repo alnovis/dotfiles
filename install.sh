@@ -2,7 +2,7 @@
 set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PACKAGES=(hypr waybar wofi fish nvim)
+PACKAGES=(hypr waybar wofi fish nvim dunst)
 
 echo "Dotfiles installer"
 echo "=================="

@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["hyprland/language", "cpu", "memory", "temperature", "tray", "bluetooth", "network", "pulseaudio", "battery"],
+    "modules-right": ["tray", "hyprland/language", "cpu", "memory", "temperature", "bluetooth", "network", "pulseaudio", "battery"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -32,11 +32,11 @@
             "weeks-pos": "right",
             "on-scroll": 1,
             "format": {
-                "months": "<span color='#89b4fa' size='xx-large'><b>{}</b></span>",
+                "months": "<span color='#9EBD6E' size='xx-large'><b>{}</b></span>",
                 "days": "<span size='x-large'>{}</span>",
-                "weeks": "<span color='#6c7086' size='large'>W{}</span>",
-                "weekdays": "<span color='#cba6f7' size='x-large'><b>{}</b></span>",
-                "today": "<span color='#1e1e2e' bgcolor='#89b4fa' size='x-large'><b>{}</b></span>"
+                "weeks": "<span color='#6c7070' size='large'>W{}</span>",
+                "weekdays": "<span color='#B5C689' size='x-large'><b>{}</b></span>",
+                "today": "<span color='#1e1e28' bgcolor='#9EBD6E' size='x-large'><b>{}</b></span>"
             }
         },
         "actions": {

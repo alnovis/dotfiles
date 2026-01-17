@@ -4,26 +4,26 @@
 }
 
 window#waybar {
-    background-color: rgba(30, 30, 46, 0.9);
-    color: #cdd6f4;
-    border-bottom: 2px solid rgba(100, 114, 125, 0.5);
+    background-color: rgba(30, 30, 40, 0.9);
+    color: #d4d4c8;
+    border-bottom: 2px solid rgba(158, 189, 110, 0.4);
 }
 
 #workspaces button {
     padding: 0 8px;
-    color: #cdd6f4;
+    color: #d4d4c8;
     background: transparent;
     border: none;
     border-radius: 0;
 }
 
 #workspaces button:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(158, 189, 110, 0.15);
 }
 
 #workspaces button.active {
-    color: #89b4fa;
-    border-bottom: 2px solid #89b4fa;
+    color: #9EBD6E;
+    border-bottom: 2px solid #9EBD6E;
 }
 
 #clock,
@@ -40,40 +40,40 @@ window#waybar {
 
 #cpu.warning,
 #memory.warning {
-    color: #f9e2af;
+    color: #C4B454;
 }
 
 #cpu.critical,
 #memory.critical {
-    color: #f38ba8;
+    color: #d4726a;
 }
 
 #temperature.critical {
-    color: #f38ba8;
+    color: #d4726a;
 }
 
 #battery.charging {
-    color: #a6e3a1;
+    color: #9EBD6E;
 }
 
 #battery.warning:not(.charging) {
-    color: #f9e2af;
+    color: #C4B454;
 }
 
 #battery.critical:not(.charging) {
-    color: #f38ba8;
+    color: #d4726a;
 }
 
 #pulseaudio.muted {
-    color: #6c7086;
+    color: #6c7070;
 }
 
 #bluetooth.connected {
-    color: #89b4fa;
+    color: #9EBD6E;
 }
 
 #network.disconnected {
-    color: #6c7086;
+    color: #6c7070;
 }
 
 #tray > .passive {

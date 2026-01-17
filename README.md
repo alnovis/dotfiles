@@ -9,6 +9,7 @@ dotfiles/
 ├── hypr/           # Hyprland window manager
 ├── waybar/         # Status bar
 ├── wofi/           # Application launcher
+├── dunst/          # Notifications
 ├── fish/           # Fish shell
 ├── nvim/           # Neovim (Lazy.nvim)
 ├── install.sh      # Installation script

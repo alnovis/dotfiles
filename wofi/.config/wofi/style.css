@@ -1,16 +1,16 @@
 window {
     margin: 0px;
-    border: 2px solid #89b4fa;
+    border: 2px solid #9EBD6E;
     border-radius: 10px;
-    background-color: #1e1e2e;
+    background-color: #1e1e28;
 }
 
 #input {
     margin: 5px;
     border: none;
     border-radius: 5px;
-    color: #cdd6f4;
-    background-color: #313244;
+    color: #d4d4c8;
+    background-color: #2a2a36;
 }
 
 #inner-box {
@@ -27,14 +27,14 @@ window {
 
 #text {
     margin: 5px;
-    color: #cdd6f4;
+    color: #d4d4c8;
 }
 
 #entry:selected {
-    background-color: #313244;
+    background-color: #2a2a36;
     border-radius: 5px;
 }
 
 #entry:selected #text {
-    color: #89b4fa;
+    color: #9EBD6E;
 }

@@ -1,4 +1,3 @@
-function pbcopy --wraps='xclip -selection clipboard' --description 'alias pbcopy=xclip -selection clipboard'
-  xclip -selection clipboard $argv
-        
+function pbcopy --wraps='wl-copy' --description 'alias pbcopy=wl-copy'
+  wl-copy $argv
 end

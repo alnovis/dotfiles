@@ -1,4 +1,3 @@
-function pbpaste --wraps='xclip -selection clipboard -o' --description 'alias pbpaste=xclip -selection clipboard -o'
-  xclip -selection clipboard -o $argv
-        
+function pbpaste --wraps='wl-paste' --description 'alias pbpaste=wl-paste'
+  wl-paste $argv
 end

@@ -76,6 +76,8 @@ CITY="Your-City-Name"
 | `Super + T` | Telegram |
 | `Super + B` | Firefox |
 | `Super + I` | IntelliJ IDEA |
+| `Super + N` | Toggle DND |
+| `Super + M` | Toggle mic mute |
 | `Super + Shift + E` | Exit Hyprland |
 | `Print` | Screenshot (select area) |
 
@@ -84,6 +86,8 @@ CITY="Your-City-Name"
 | Module | Description |
 |--------|-------------|
 | Workspaces | Click to switch |
+| DND | Red when active, auto-enables on screen share |
+| MIC | Blinking red when muted |
 | Weather | City weather from wttr.in, hover for details |
 | Clock | Date/time, hover for calendar |
 | CPU/RAM/Temp | System monitoring with warning colors |

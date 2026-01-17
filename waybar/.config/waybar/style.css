@@ -54,7 +54,10 @@ window#waybar {
     padding: 0 10px;
 }
 
-#custom-dnd.on,
+#custom-dnd.on {
+    color: #d4726a;
+}
+
 #custom-mic.muted {
     color: #d4726a;
     animation: blink 0.8s ease-in-out infinite;

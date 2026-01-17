@@ -70,7 +70,7 @@ cd ~/dotfiles
 
 Arch Linux:
 ```bash
-sudo pacman -S hyprland waybar wofi kitty fish neovim swaybg dunst \
+sudo pacman -S hyprland waybar wofi kitty fish neovim swaybg dunst libnotify \
     grim slurp wl-clipboard blueman pavucontrol brightnessctl \
     ttf-font-awesome ttf-jetbrains-mono
 ```

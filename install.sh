@@ -37,6 +37,7 @@ install_deps() {
             neovim \
             swaybg \
             dunst \
+            libnotify \
             grim \
             slurp \
             wl-clipboard \

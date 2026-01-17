@@ -1,0 +1,111 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["hyprland/language", "cpu", "memory", "temperature", "tray", "bluetooth", "network", "pulseaudio", "battery"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "<span color='#f38ba8'>RU</span>"
+    },
+
+    "clock": {
+        "format": "{:%a, %b %d  %I:%M %p}",
+        "tooltip-format": "<span size='x-large'>{calendar}</span>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#89b4fa' size='xx-large'><b>{}</b></span>",
+                "days": "<span size='x-large'>{}</span>",
+                "weeks": "<span color='#6c7086' size='large'>W{}</span>",
+                "weekdays": "<span color='#cba6f7' size='x-large'><b>{}</b></span>",
+                "today": "<span color='#1e1e2e' bgcolor='#89b4fa' size='x-large'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "CPU {usage}%",
+        "tooltip-format": "CPU: {usage}%\nLoad: {load}",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 2,
+        "format": "RAM {percentage}%",
+        "tooltip-format": "RAM: {used:0.1f}GB / {total:0.1f}GB",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "temperature": {
+        "interval": 2,
+        "format": "{temperatureC}°C",
+        "critical-threshold": 80,
+        "tooltip-format": "Temperature: {temperatureC}°C"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "BAT {capacity}%",
+        "format-charging": "CHG {capacity}%",
+        "format-plugged": "PLG {capacity}%"
+    },
+
+    "network": {
+        "format-wifi": "WiFi {signalStrength}%",
+        "format-ethernet": "ETH",
+        "format-disconnected": "OFF",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "MUTE",
+        "on-click": "pavucontrol"
+    },
+
+    "bluetooth": {
+        "format": "BT",
+        "format-connected": "BT: {device_alias}",
+        "format-connected-battery": "BT: {device_alias} {device_battery_percentage}%",
+        "tooltip-format": "{controller_alias}\n{status}",
+        "on-click": "blueman-manager"
+    },
+
+    "tray": {
+        "spacing": 10
+    }
+}

@@ -1,0 +1,10 @@
+# Generated files
+*.pyc
+__pycache__/
+
+# Fish local state (optional - remove if you want to sync)
+fish/.config/fish/fish_variables
+
+# OS files
+.DS_Store
+Thumbs.db

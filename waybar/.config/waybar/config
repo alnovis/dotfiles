@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["custom/weather", "clock"],
-    "modules-right": ["tray", "hyprland/language", "cpu", "memory", "temperature", "custom/bluetooth", "network", "pulseaudio", "custom/power-profile", "battery"],
+    "modules-right": ["tray", "custom/dnd", "custom/mic", "hyprland/language", "cpu", "memory", "temperature", "custom/bluetooth", "network", "pulseaudio", "custom/power-profile", "battery"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -122,5 +122,21 @@
 
     "tray": {
         "spacing": 10
+    },
+
+    "custom/dnd": {
+        "exec": "~/.config/waybar/scripts/dnd.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": "{}",
+        "on-click": "~/.config/waybar/scripts/dnd.sh toggle"
+    },
+
+    "custom/mic": {
+        "exec": "~/.config/waybar/scripts/mic.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": "{}",
+        "on-click": "~/.config/waybar/scripts/mic.sh toggle"
     }
 }

@@ -41,6 +41,8 @@ window#waybar {
 #custom-weather,
 #custom-power-profile,
 #custom-bluetooth,
+#custom-dnd,
+#custom-mic,
 #clock,
 #battery,
 #network,
@@ -50,6 +52,18 @@ window#waybar {
 #temperature,
 #tray {
     padding: 0 10px;
+}
+
+#custom-dnd.on,
+#custom-mic.muted {
+    color: #d4726a;
+    animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
 }
 
 #cpu.warning,

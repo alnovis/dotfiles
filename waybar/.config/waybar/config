@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["custom/weather", "clock"],
-    "modules-right": ["tray", "custom/dnd", "custom/mic", "hyprland/language", "cpu", "memory", "temperature", "custom/bluetooth", "network", "pulseaudio", "custom/power-profile", "battery"],
+    "modules-right": ["tray", "custom/dnd", "custom/mic", "hyprland/language", "cpu", "memory", "custom/bluetooth", "custom/vpn", "network", "pulseaudio", "custom/power-profile", "battery"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -103,7 +103,8 @@
         "format-ethernet": "ETH",
         "format-disconnected": "OFF",
         "tooltip-format": "{ifname}: {ipaddr}",
-        "on-click": "nm-connection-editor"
+        "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
+        "on-click-right": "nm-connection-editor"
     },
 
     "pulseaudio": {
@@ -138,5 +139,13 @@
         "interval": 1,
         "format": "{}",
         "on-click": "~/.config/waybar/scripts/mic.sh toggle"
+    },
+
+    "custom/vpn": {
+        "exec": "~/.config/waybar/scripts/vpn.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{}",
+        "on-click": "~/.config/waybar/scripts/vpn.sh toggle"
     }
 }

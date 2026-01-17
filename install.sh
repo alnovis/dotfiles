@@ -42,13 +42,28 @@ install_deps() {
             slurp \
             wl-clipboard \
             blueman \
+            bluez \
+            bluez-utils \
             pavucontrol \
             brightnessctl \
+            power-profiles-daemon \
+            networkmanager \
+            nm-connection-editor \
             ttf-font-awesome \
-            ttf-jetbrains-mono
+            ttf-jetbrains-mono \
+            curl
     else
         echo "Not an Arch-based system. Please install dependencies manually."
     fi
+}
+
+# Enable system services
+enable_services() {
+    echo ""
+    echo "Enabling services..."
+    sudo systemctl enable --now bluetooth.service
+    sudo systemctl enable --now NetworkManager.service
+    sudo systemctl enable --now power-profiles-daemon.service
 }
 
 # Stow packages
@@ -84,6 +99,7 @@ case "${1:-}" in
     install)
         install_deps
         stow_packages
+        enable_services
         echo ""
         echo "Done! Log out and select Hyprland at login screen."
         ;;

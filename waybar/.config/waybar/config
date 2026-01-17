@@ -5,8 +5,8 @@
     "spacing": 4,
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["tray", "hyprland/language", "cpu", "memory", "temperature", "bluetooth", "network", "pulseaudio", "battery"],
+    "modules-center": ["custom/weather", "clock"],
+    "modules-right": ["tray", "hyprland/language", "cpu", "memory", "temperature", "custom/bluetooth", "network", "pulseaudio", "custom/power-profile", "battery"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -21,6 +21,21 @@
         "format": "{}",
         "format-en": "EN",
         "format-ru": "<span color='#f38ba8'>RU</span>"
+    },
+
+    "custom/weather": {
+        "exec": "~/.config/waybar/scripts/weather.sh",
+        "return-type": "json",
+        "interval": 900,
+        "format": "{}"
+    },
+
+    "custom/power-profile": {
+        "exec": "~/.config/waybar/scripts/power-profile.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{}",
+        "on-click": "~/.config/waybar/scripts/power-profile.sh cycle"
     },
 
     "clock": {
@@ -97,11 +112,11 @@
         "on-click": "pavucontrol"
     },
 
-    "bluetooth": {
-        "format": "BT",
-        "format-connected": "BT: {device_alias}",
-        "format-connected-battery": "BT: {device_alias} {device_battery_percentage}%",
-        "tooltip-format": "{controller_alias}\n{status}",
+    "custom/bluetooth": {
+        "exec": "~/.config/waybar/scripts/bluetooth.sh",
+        "return-type": "json",
+        "interval": 5,
+        "format": "{}",
         "on-click": "blueman-manager"
     },
 

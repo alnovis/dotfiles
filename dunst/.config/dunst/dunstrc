@@ -37,11 +37,12 @@
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
-    show_indicators = yes
+    show_indicators = no
 
-    icon_position = left
+    icon_position = off
     min_icon_size = 32
     max_icon_size = 64
+    enable_recursive_icon_lookup = true
 
     sticky_history = yes
     history_length = 20
@@ -75,3 +76,7 @@
     foreground = "#d4d4c8"
     frame_color = "#d4726a"
     timeout = 0
+
+[telegram]
+    appname = Telegram*
+    icon_position = left

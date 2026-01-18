@@ -40,8 +40,10 @@ window#waybar {
 #custom-weather,
 #custom-power-profile,
 #custom-bluetooth,
+#custom-vpn,
 #custom-dnd,
 #custom-mic,
+#custom-notifications,
 #clock,
 #battery,
 #network,
@@ -53,8 +55,25 @@ window#waybar {
     padding: 0 10px;
 }
 
+#custom-vpn.connected {
+    color: #9EBD6E;
+}
+
+#custom-vpn.disconnected {
+    color: #6c7070;
+}
+
 #custom-dnd.on {
     color: #d4726a;
+}
+
+#custom-notifications.unread {
+    color: #C4B454;
+    animation: blink 1s ease-in-out infinite;
+}
+
+#custom-notifications.history {
+    color: #6c7070;
 }
 
 #custom-mic.muted {

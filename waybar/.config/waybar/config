@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["custom/weather", "clock"],
-    "modules-right": ["tray", "custom/dnd", "custom/mic", "hyprland/language", "cpu", "memory", "custom/bluetooth", "custom/vpn", "network", "pulseaudio", "custom/power-profile", "battery"],
+    "modules-right": ["tray", "custom/notifications", "custom/dnd", "custom/mic", "hyprland/language", "cpu", "memory", "custom/bluetooth", "custom/vpn", "network", "pulseaudio", "custom/power-profile", "battery"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -123,6 +123,15 @@
 
     "tray": {
         "spacing": 10
+    },
+
+    "custom/notifications": {
+        "exec": "~/.config/waybar/scripts/notifications.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": "{}",
+        "on-click": "rm -f /tmp/dunst-unread-count /tmp/dunst-unread-apps /tmp/dunst-last-displayed",
+        "on-click-right": "dunstctl history-pop"
     },
 
     "custom/dnd": {

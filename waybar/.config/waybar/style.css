@@ -52,7 +52,7 @@ window#waybar {
 #memory,
 #temperature,
 #tray {
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 #custom-vpn.connected {

@@ -47,10 +47,16 @@ if [ -f "$CACHE_FILE" ]; then
     fi
 fi
 
-# Fetch weather
-weather=$(curl -s --max-time 15 "$URL_SHORT" 2>/dev/null)
+# Fetch weather with proper error handling
+weather=$(curl -sf --max-time 10 "$URL_SHORT" 2>/dev/null)
+curl_exit=$?
 
-if [ -n "$weather" ] && [[ ! "$weather" =~ "Unknown" ]]; then
+# Validate response: not empty, not HTML, not error message
+if [ $curl_exit -eq 0 ] && [ -n "$weather" ] && \
+   [[ ! "$weather" =~ "Unknown" ]] && \
+   [[ ! "$weather" =~ "<" ]] && \
+   [[ ! "$weather" =~ "error" ]] && \
+   [ ${#weather} -lt 100 ]; then
     condition=$(echo "$weather" | cut -d'|' -f1 | tr '[:lower:]' '[:upper:]' | xargs)
     temp=$(echo "$weather" | cut -d'|' -f2 | xargs)
     wind=$(echo "$weather" | cut -d'|' -f3 | xargs)
@@ -89,10 +95,10 @@ if [ -n "$weather" ] && [[ ! "$weather" =~ "Unknown" ]]; then
     echo "$output" > "$CACHE_FILE"
     echo "$output"
 else
-    # Return cached or fallback
+    # Return cached or short fallback
     if [ -f "$CACHE_FILE" ]; then
         cat "$CACHE_FILE"
     else
-        echo '{"text": "WEATHER N/A", "tooltip": "Unable to fetch weather"}'
+        echo '{"text": "—", "tooltip": "Weather unavailable"}'
     fi
 fi
